@@ -1,0 +1,16 @@
+1. (caso vc n tiver nenhum compilador já instalado) BAIXA O MSVC. (caso já tenha, pula pro passo 2 ou pro passo 4)
+1.1 Entra nesse site: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022.
+1.2 Baixa e instala o 'Build Tools for Visual Studio 2022'.
+1.3 Na hora de instalar de verdade clica SÓ E SOMENTE SÓ NO BOTÃO ESCRITO 'Desktop development with C++', pode tirar as outras opções caso elas estejam marcadas, o Visual Studio ADORA consumir espaço no HD.
+2. baixa o vscode. (MAS NÃO ABRE ELE AINDA)
+3. REINICIA O PC.
+4. BAIXA O REPOSITÓRIO PELO GITHUB DESKTOP (https://desktop.github.com/download/)
+5. entra na pasta do repositório
+6. da um duplo clique no arquivo 'aed.code-workspace', é o aquivo de projeto do vscode
+7. abre o arquivo 'src\main.cpp' dentro do vscode
+8. depois de aberto, preciona F5
+9. clica na opção 'C/C++: (um monte de texto)'
+10. a ventoinha do seu PC vai começar a girar pra caralho
+11. alguns segundos vão se passar, mas quando vc menos espera... 
+12. TA PRONTO! se deu tudo certo, coisas devem estar aparecendo no terminal integrado do vscode
+13. profit.

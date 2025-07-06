@@ -1,6 +1,4 @@
-Trabalho de Algoritmos e Estrutura de Dados sobre POO e Listas. 
-
----
+# Trabalho de Algoritmos e Estrutura de Dados sobre POO e Listas. 
 
 ## Sobre a classe abstrata `Elemento`
 
@@ -18,21 +16,21 @@ Implementar como classes **container**, que gerenciam memória dos objetos herde
 Analisar e comentar a **complexidade** de cada método.
 
 - Lista Não Ordenada
-  - [ ] InserirNoInicio
-  - [ ] InserirNoFinal
-  - [ ] RemoverPrimeiro
-  - [ ] RemoverUltimo
-  - [ ] RemoverPeloId
-  - [ ] BuscarPeloId
-  - [ ] AlterarPeloId
+  - [X] InserirNoInicio
+  - [X] InserirNoFinal
+  - [X] RemoverPrimeiro
+  - [X] RemoverUltimo
+  - [X] RemoverPeloId
+  - [X] BuscarPeloId
+  - [X] AlterarPeloId
 
 - Lista Ordenada
-  - [ ] Inserir (lembrar de ordernar o elemento pelo `ID`)
-  - [ ] RemoverPrimeiro
-  - [ ] RemoverUltimo
-  - [ ] RemoverPeloId
-  - [ ] BuscarPeloId (busca binária usando o `ID`)
-  - [ ] AlterarPeloId
+  - [X] Inserir (lembrar de ordernar o elemento pelo `ID`)
+  - [X] RemoverPrimeiro
+  - [X] RemoverUltimo
+  - [X] RemoverPeloId
+  - [X] BuscarPeloId (busca binária usando o `ID`)
+  - [X] AlterarPeloId
 
 As estruturas a seguir devem ser montadas por **composição**.
 
