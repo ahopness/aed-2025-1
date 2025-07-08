@@ -2,7 +2,7 @@
 
 #include "lista_ordenada.h"
 
-using std::cin;
+using std::endl;
 using std::cout;
 
 ListaOrdenada::Item::Item(int id, const std::string& valor){
