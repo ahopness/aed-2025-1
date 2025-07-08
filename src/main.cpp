@@ -3,8 +3,11 @@
 #include "aloc_sequencial/lista_nao_ordenada.h"
 #include "aloc_sequencial/lista_ordenada.h"
 
+using std::cout;
+using std::endl;
+
 void demonstrarListaNaoOrdenada() {
-    std::cout << "=== DEMONSTRACAO LISTA NAO ORDENADA ===" << std::endl;
+    cout << "=== DEMONSTRACAO LISTA NAO ORDENADA ===" << endl;
     
     ListaNaoOrdenada lista;
     
@@ -15,23 +18,23 @@ void demonstrarListaNaoOrdenada() {
     std::cout << "Apos insercoes:" << std::endl;
     lista.imprimirLista();
     
-    std::cout << "Buscando elemento ID 10:" << std::endl;
+    cout << "Buscando elemento ID 10:" << endl;
     Elemento* elem = lista.buscarPeloId(10);
     if (elem) {
-        std::cout << "  Encontrado: ";
+        cout << "  Encontrado: ";
         elem->imprimirInfo();
     }
     
     lista.removerPrimeiro();
-    std::cout << "Apos remover primeiro:" << std::endl;
+    cout << "Apos remover primeiro:" << endl;
     lista.imprimirLista();
     
-    std::cout << "Tamanho final: " << lista.getTamanho() << std::endl;
-    std::cout << std::endl;
+    cout << "Tamanho final: " << lista.getTamanho() << endl;
+    cout << endl;
 }
 
 void demonstrarListaOrdenada() {
-    std::cout << "=== DEMONSTRACAO LISTA ORDENADA ===" << std::endl;
+    cout << "=== DEMONSTRACAO LISTA ORDENADA ===" << endl;
     
     ListaOrdenada lista;
     
@@ -39,22 +42,22 @@ void demonstrarListaOrdenada() {
     lista.inserir(10, "Elemento A");
     lista.inserir(20, "Elemento B");
     
-    std::cout << "Apos insercoes (automaticamente ordenada):" << std::endl;
+    cout << "Apos insercoes (automaticamente ordenada):" << endl;
     lista.imprimirLista();
     
-    std::cout << "Buscando elemento ID 20 (busca binaria):" << std::endl;
+    cout << "Buscando elemento ID 20 (busca binaria):" << endl;
     Elemento* elem = lista.buscarPeloId(20);
     if (elem) {
-        std::cout << "  Encontrado: ";
+        cout << "  Encontrado: ";
         elem->imprimirInfo();
     }
     
     lista.alterarPeloId(30, "Elemento C Alterado");
-    std::cout << "Apos alterar ID 30:" << std::endl;
+    cout << "Apos alterar ID 30:" << endl;
     lista.imprimirLista();
     
-    std::cout << "Tamanho final: " << lista.getTamanho() << std::endl;
-    std::cout << std::endl;
+    cout << "Tamanho final: " << lista.getTamanho() << endl;
+    cout << endl;
 }
 
 int main() {
