@@ -2,6 +2,9 @@
 
 #include "lista_ordenada.h"
 
+using std::cin;
+using std::cout;
+
 ListaOrdenada::Item::Item(int id, const std::string& valor){
     this->ID = id;
     this->valor = valor;
@@ -19,7 +22,7 @@ std::string ListaOrdenada::Item::getValor() const {
 }
 
 void ListaOrdenada::Item::imprimirInfo() {
-    std::cout << "ID: " << this->ID << ", valor: " << this->valor << std::endl;
+    cout << "ID: " << this->ID << ", valor: " << this->valor << endl;
 }
 
 ListaOrdenada::ListaOrdenada(int capacidade_inicial) {
@@ -172,10 +175,10 @@ int ListaOrdenada::getTamanho() const {
 }
 
 void ListaOrdenada::imprimirLista() {
-    std::cout << "Lista Ordenada (Tamanho: " << this->tamanho << "):" << std::endl;
+    cout << "Lista Ordenada (Tamanho: " << this->tamanho << "):" << endl;
     for (int i = 0; i < this->tamanho; i++) {
-        std::cout << "  Posicao " << i << ": ";
+        cout << "  Posicao " << i << ": ";
         this->elementos[i]->imprimirInfo();
     }
-    std::cout << std::endl;
+    cout << endl;
 } 
