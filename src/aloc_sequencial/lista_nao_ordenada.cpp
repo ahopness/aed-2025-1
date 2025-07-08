@@ -4,6 +4,9 @@
 
 // ITEM
 
+using std::cout;
+using std::endl;
+
 ListaNaoOrdenada::Item::Item(int id, const std::string& valor){
     this->ID = id;
     this->valor = valor;
@@ -19,7 +22,7 @@ std::string ListaNaoOrdenada::Item::getValor() const {
 }
 
 void ListaNaoOrdenada::Item::imprimirInfo() {
-    std::cout << "ID: " << this->ID << ", valor: " << this->valor << std::endl;
+    cout << "ID: " << this->ID << ", valor: " << this->valor << endl;
 }
 
 // LISTA
@@ -152,10 +155,10 @@ int ListaNaoOrdenada::getTamanho() const {
 }
 
 void ListaNaoOrdenada::imprimirLista() {
-    std::cout << "Lista Nao Ordenada (Tamanho: " << this->tamanho << "):" << std::endl;
+    cout << "Lista Nao Ordenada (Tamanho: " << this->tamanho << "):" << endl;
     for (int i = 0; i < this->tamanho; i++) {
-        std::cout << "  Posicao " << i << ": ";
+        cout << "  Posicao " << i << ": ";
         this->elementos[i]->imprimirInfo();
     }
-    std::cout << std::endl;
+    cout << endl;
 }
