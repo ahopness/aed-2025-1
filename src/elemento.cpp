@@ -2,6 +2,9 @@
 
 #include "elemento.h"
 
+using std::cout;
+using std::endl;
+
 Elemento::Elemento() {
     this->ID = 0;
 }
@@ -14,5 +17,5 @@ int Elemento::getID() const {
 }
 
 void Elemento::imprimirInfo() {
-    std::cout << "ID: " << this->ID << std::endl;
+    cout << "ID: " << this->ID << endl;
 }
