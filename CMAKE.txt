@@ -1,6 +1,5 @@
 1. (Antes de seguir esse txt, instale o compilador como descrito no "COMO-RODAR-O-CODIGO.txt".
-1.1. No VSCode, abra a pasta src.
-1.2. Não rode o código aínda, VAI DAR ERRO. Se vc já rodou, apague a pasta ".vscode" e todos os arquivos q não terminem em .cpp ou .h .
+1.1. Não rode o código aínda, VAI DAR ERRO. Se vc já rodou, apague a pasta ".vscode" e todos os arquivos q não terminem em .cpp ou .h .
 
 2. Você vai baixar o CMake Tools da Microsoft no VSCode (https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
 
@@ -28,6 +27,6 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 5. No canto inferior esquerdo, você vai ver um simbolo de engrenagem com o texto "build" do lado. Quando selecionado, você vai escolher o 
 	"Visual Studio Community 2022 Release - amd64" . Isso vai fazer uma pasta build no seu arquivo.
-5.1. Se você não encontrar o botão "build", feche e abra o VSCode de novo. Lembre de abrir a pasta src, não o repositório inteiro!!!
+5.1. Se você não encontrar o botão "build", feche e abra o VSCode de novo.
 	
 6. Por final, é só executar o código. Debugar executa o código no Debug Console, e executar executa o código no Terminal.
