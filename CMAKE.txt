@@ -1,0 +1,31 @@
+1. (Antes de seguir esse txt, instale o compilador como descrito no "COMO-RODAR-O-CODIGO.txt".
+1.1. Não rode o código aínda, VAI DAR ERRO. Se vc já rodou, apague a pasta "vscode" e todos os arquivos q não terminem em .cpp ou .h .
+
+2. Você vai baixar o CMake Tools da Microsoft no VSCode (https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
+
+3. Na pasta src, você vai inserir um novo arquivo txt com o nome "CMakeLists.txt". Se o VSCode pedir uma build para rodar o código, só ignora por enquanto.
+
+4. Dentro do txt, você vai escrever exatamente isso:
+
+cmake_minimum_required(VERSION 3.24)
+project(aeds_2025_1)
+
+set(SOURCE_FILES
+    main.cpp
+    elemento.cpp
+    aloc_sequencial/lista_nao_ordenada.cpp
+    aloc_sequencial/lista_ordenada.cpp
+)
+
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+
+4.1. O cmake_minimum_required(VERSION 3.24) é a versão mínima q vamos usar pro cmake compilar os códigos, NÃO PODE ESQUECER DISSO.
+4.2. O project(aeds_2025_1) é o nome do projeto, e o nome do nosso arquivo .exe .
+4.3. Onde todos os arquivos dentro do set(SOURCE_FILES .... ) são os arquivos .cpp que você vai compilar junto, se você criar mais, coloque-os aqui.
+	(NÃO ADICIONE ARQUIVOS QUE NÃO SÃO .cpp!!!)
+4.4. O add_executable(${PROJECT_NAME} ${SOURCE_FILES}) cria um executavel .exe com o nome do nosso projeto e todos os arquivos .cpp SOURCE_FILES.
+
+5. No canto inferior esquerdo, você vai ver um simbolo de engrenagem com o texto "build" do lado. Quando selecionado, você vai escolher o 
+	Developer Powershell for VS 2022. Isso vai fazer uma pasta build no seu arquivo.
+	
+6. Por final, é só executar o código.
