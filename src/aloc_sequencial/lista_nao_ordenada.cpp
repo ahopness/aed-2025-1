@@ -2,10 +2,10 @@
 
 #include "lista_nao_ordenada.h"
 
-// ITEM
-
 using std::cout;
 using std::endl;
+
+// ITEM
 
 ListaNaoOrdenada::Item::Item(int id, const std::string& valor){
     this->ID = id;

@@ -56,13 +56,13 @@ Avaliar e comentar a **ineficiência** da manipulação, em seguida propor e imp
 A classe interna de nó (herdada de elemento) deve ser **privada** (encapsulada) dentro de cada estrutura.
 
 - ListaSimplesmenteEncadeada
-  - [ ] InserirNoInicio
-  - [ ] InserirNoFinal
-  - [ ] RemoverPrimeiro
-  - [ ] RemoverUltimo
-  - [ ] RemoverPeloId
-  - [ ] BuscarPeloId
-  - [ ] AlterarPeloId
+  - [X] InserirNoInicio
+  - [X] InserirNoFinal
+  - [X] RemoverPrimeiro
+  - [X] RemoverUltimo
+  - [X] RemoverPeloId
+  - [X] BuscarPeloId
+  - [X] AlterarPeloId
 
 - ListaDuplamenteEncadeada
   - [ ] InserirNoInicio
