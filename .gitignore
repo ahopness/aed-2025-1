@@ -1,5 +1,5 @@
-.vscode/
-*.sh
+.cache/
+build/
 
 # Prerequisites
 *.d

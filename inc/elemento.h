@@ -14,4 +14,4 @@ public:
     virtual void imprimirInfo();
 };
 
-#endif // ELEMENTO_H
+#endif
