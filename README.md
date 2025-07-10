@@ -65,22 +65,22 @@ A classe interna de nó (herdada de elemento) deve ser **privada** (encapsulada)
   - [X] AlterarPeloId
 
 - ListaDuplamenteEncadeada
-  - [ ] InserirNoInicio
-  - [ ] InserirNoFinal
-  - [ ] RemoverPrimeiro
-  - [ ] RemoverUltimo
-  - [ ] RemoverPeloId
-  - [ ] BuscarPeloId
-  - [ ] AlterarPeloId
+  - [X] InserirNoInicio
+  - [X] InserirNoFinal
+  - [X] RemoverPrimeiro
+  - [X] RemoverUltimo
+  - [X] RemoverPeloId
+  - [X] BuscarPeloId
+  - [X] AlterarPeloId
 
 - ListaDuplamenteEncadeadaCircular
-  - [ ] InserirNoInicio
-  - [ ] InserirNoFinal
-  - [ ] RemoverPrimeiro
-  - [ ] RemoverUltimo
-  - [ ] RemoverPeloId
-  - [ ] BuscarPeloId
-  - [ ] AlterarPeloId
+  - [X] InserirNoInicio
+  - [X] InserirNoFinal
+  - [X] RemoverPrimeiro
+  - [X] RemoverUltimo
+  - [X] RemoverPeloId
+  - [X] BuscarPeloId
+  - [X] AlterarPeloId
 
 As estruturas a seguir devem ser montadas por **composição**.
 
@@ -113,9 +113,9 @@ Basear a organização no atributo ID.
 Ajuda: https://en.wikipedia.org/wiki/Binary_search_tree.
 
 - Árvore Binária de Busca
-  - [ ] Inserir
-  - [ ] BuscarPeloId
-  - [ ] RemoverPeloId
+  - [X] Inserir
+  - [X] BuscarPeloId
+  - [X] RemoverPeloId
   - Percursos: (não sei oque o prof quiz dizer com esses topicos)
     - [ ] emOrdem
     - [ ] preOrdem
@@ -131,17 +131,17 @@ Para estruturas dinâmicas:
 - Demonstrar o comportamento esperado
 
 - Testa as estruturas
-  - [ ] Lista Não Ordenada
-  - [ ] Lista Ordenada
+  - [X] Lista Não Ordenada
+  - [X] Lista Ordenada
   - [ ] Pilha (Sequencial)
   - [ ] Fila (Sequencial)
-  - [ ] ListaSimplesmenteEncadeada
-  - [ ] ListaDuplamenteEncadeada
-  - [ ] ListaDuplamenteEncadeadaCircular
+  - [X] ListaSimplesmenteEncadeada
+  - [X] ListaDuplamenteEncadeada
+  - [X] ListaDuplamenteEncadeadaCircular
   - [ ] Pilha (Encadeada)
   - [ ] Fila (Encadeada)
   - [ ] Deque (Encadeada)
-  - [ ] Árvore Binária de Busca
+  - [X] Árvore Binária de Busca
 
     
 ## Para fazer antes de enviar
