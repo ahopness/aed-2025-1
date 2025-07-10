@@ -1,17 +1,18 @@
-#ifndef LISTA_SIMPLESMENTE_ENCADEADA_H
-#define LISTA_SIMPLESMENTE_ENCADEADA_H
+#ifndef LISTA_DUPLAMENTE_ENCADEADA_H
+#define LISTA_DUPLAMENTE_ENCADEADA_H
 
 #include <iostream>
 #include <string>
 
 #include "../elemento.h"
 
-class ListaSimplesmenteEncadeada {
+class ListaDuplamenteEncadeada {
 private:
     class No : public Elemento {
     private:
         std::string valor;
         No* proximo;
+        No* anterior;
     
     public:
         No(int id, const std::string& valor);
@@ -22,6 +23,8 @@ private:
 
         void setProximo(No* proximo);
         No* getProximo() const;
+        void setAnterior(No* anterior);
+        No* getAnterior() const;
 
         void imprimirInfo() override;
     };
@@ -30,14 +33,14 @@ private:
     int tamanho;
     
     void inserirNoFinalRecursivo(No* atual, int id, const std::string& valor);
-    No* encontrarPenultimoRecursivo(No* atual);
+    No* encontrarUltimoRecursivo(No* atual);
     Elemento* buscarPeloIdRecursivo(No* atual, int id);
     bool alterarPeloIdRecursivo(No* atual, int id, const std::string& novo_valor);
     void imprimirListaRecursivo(No* atual, int posicao);
 
 public:
-    ListaSimplesmenteEncadeada();
-    ~ListaSimplesmenteEncadeada();
+    ListaDuplamenteEncadeada();
+    ~ListaDuplamenteEncadeada();
     
     void inserirNoInicio(int id, const std::string& valor);
     void inserirNoFinal(int id, const std::string& valor);
@@ -53,4 +56,4 @@ public:
     void imprimirLista();
 };
 
-#endif
+#endif 

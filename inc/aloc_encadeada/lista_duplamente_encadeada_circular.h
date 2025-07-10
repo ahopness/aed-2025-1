@@ -1,43 +1,48 @@
-#ifndef LISTA_NAO_ORDENADA_H
-#define LISTA_NAO_ORDENADA_H
+#ifndef LISTA_DUPLAMENTE_ENCADEADA_CIRCULAR_H
+#define LISTA_DUPLAMENTE_ENCADEADA_CIRCULAR_H
 
 #include <iostream>
 #include <string>
 
 #include "../elemento.h"
 
-class ListaNaoOrdenada {
+class ListaDuplamenteEncadeadaCircular {
 private:
-    class Item : public Elemento {
+    class No : public Elemento {
     private:
         std::string valor;
+        No* proximo;
+        No* anterior;
     
     public:
-        Item(int id, const std::string& valor);
-        ~Item();
+        No(int id, const std::string& valor);
+        ~No();
 
         void setValor(const std::string& valor);
         std::string getValor() const;
 
+        void setProximo(No* proximo);
+        No* getProximo() const;
+        void setAnterior(No* anterior);
+        No* getAnterior() const;
+
         void imprimirInfo() override;
     };
 
-    Elemento** elementos;
-    int capacidade;
+    No* primeiro;
+    No* ultimo;
     int tamanho;
-    
-    void redimensionar();
 
 public:
-    ListaNaoOrdenada(int capacidade_inicial = 10);
-    ~ListaNaoOrdenada();
+    ListaDuplamenteEncadeadaCircular();
+    ~ListaDuplamenteEncadeadaCircular();
     
     void inserirNoInicio(int id, const std::string& valor);
     void inserirNoFinal(int id, const std::string& valor);
 
     bool removerPrimeiro();
     bool removerUltimo();
-
+    
     bool removerPeloId(int id);
     Elemento* buscarPeloId(int id);
     bool alterarPeloId(int id, const std::string& novo_valor);
@@ -46,4 +51,4 @@ public:
     void imprimirLista();
 };
 
-#endif
+#endif 

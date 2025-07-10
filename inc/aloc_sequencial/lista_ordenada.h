@@ -15,8 +15,10 @@ private:
     public:
         Item(int id, const std::string& valor);
         ~Item();
+
         void setValor(const std::string& valor);
         std::string getValor() const;
+
         void imprimirInfo() override;
     };
 
@@ -32,8 +34,10 @@ public:
     ~ListaOrdenada();
     
     void inserir(int id, const std::string& valor);
+
     bool removerPrimeiro();
     bool removerUltimo();
+
     bool removerPeloId(int id);
     Elemento* buscarPeloId(int id);
     bool alterarPeloId(int id, const std::string& novo_valor);
@@ -42,4 +46,4 @@ public:
     void imprimirLista();
 };
 
-#endif // LISTA_ORDENADA_H 
+#endif
