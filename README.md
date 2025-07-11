@@ -133,14 +133,14 @@ Para estruturas dinâmicas:
 - Testa as estruturas
   - [X] Lista Não Ordenada
   - [X] Lista Ordenada
-  - [ ] Pilha (Sequencial)
-  - [ ] Fila (Sequencial)
+  - [X] Pilha (Sequencial)
+  - [X] Fila (Sequencial)
   - [X] ListaSimplesmenteEncadeada
   - [X] ListaDuplamenteEncadeada
   - [X] ListaDuplamenteEncadeadaCircular
-  - [ ] Pilha (Encadeada)
-  - [ ] Fila (Encadeada)
-  - [ ] Deque (Encadeada)
+  - [X] Pilha (Encadeada)
+  - [X] Fila (Encadeada)
+  - [X] Deque (Encadeada)
   - [X] Árvore Binária de Busca
 
     
