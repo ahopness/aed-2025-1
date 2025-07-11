@@ -9,7 +9,7 @@
 #include <iostream> // Para Std
 #include <cstdlib> // Para random()
 #include <ctime>   // Para aleatorizar mais corretamente
-#include "sorts.h"
+#include "../../inc/sorts/sorts.h"
 
 using std::swap;
 using std::rand;

@@ -1,4 +1,4 @@
-#include "lista_duplamente_encadeada.h"
+#include "../../inc/aloc_encadeada/lista_duplamente_encadeada.h"
 
 using std::cout;
 using std::endl;

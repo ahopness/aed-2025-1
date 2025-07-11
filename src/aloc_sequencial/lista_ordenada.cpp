@@ -1,6 +1,6 @@
 #include <string>
 
-#include "lista_ordenada.h"
+#include "../../inc/aloc_sequencial/lista_ordenada.h"
 
 using std::endl;
 using std::cout;

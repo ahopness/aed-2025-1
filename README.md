@@ -37,19 +37,19 @@ As estruturas a seguir devem ser montadas por **composição**.
 Avaliar e comentar a **ineficiência** da manipulação, em seguida propor e implementar uma segunda versão **otimizada**.
 
 - Pilha
-  - [ ] Empilhar
-  - [ ] Desempilhar
-  - [ ] ConsultarTopo
-  - [ ] PilhaCheia
-  - [ ] PilhaVazia
+  - [X] Empilhar
+  - [X] Desempilhar
+  - [X] ConsultarTopo
+  - [X] PilhaCheia
+  - [X] PilhaVazia
 
 - Fila
-  - [ ] Emfileirar
-  - [ ] Desemfileirar
-  - [ ] ConsultarInicio
-  - [ ] ConsultarFim
-  - [ ] FilaCheia
-  - [ ] FilaVazia
+  - [X] Emfileirar
+  - [X] Desemfileirar
+  - [X] ConsultarInicio
+  - [X] ConsultarFim
+  - [X] FilaCheia
+  - [X] FilaVazia
 
 ## Classes de alocação encadeada
 
@@ -87,24 +87,24 @@ As estruturas a seguir devem ser montadas por **composição**.
 Escolher a estrutura (ListaSimplesmenteEncadeada, ListaDuplamenteEncadeada ou ListaDuplamenteEncadeadaCircular) mais **eficiente** para implementar em cada caso.
 
 - Pilha
-  - [ ] Empilhar
-  - [ ] Desempilhar
-  - [ ] ConsultarTopo
-  - [ ] PilhaVazia
+  - [X] Empilhar
+  - [X] Desempilhar
+  - [X] ConsultarTopo
+  - [X] PilhaVazia
 
 - Fila
-  - [ ] Emfileirar
-  - [ ] Desemfileirar
-  - [ ] ConsultarInicio
-  - [ ] ConsultarFim
-  - [ ] FilaVazia
+  - [X] Emfileirar
+  - [X] Desemfileirar
+  - [X] ConsultarInicio
+  - [X] ConsultarFim
+  - [X] FilaVazia
 
 - Deque
-  - [ ] InserirNoInicio
-  - [ ] InserirNoFinal
-  - [ ] RemoverPrimeiro
-  - [ ] RemoverUltimo
-  - [ ] DequeVazia
+  - [X] InserirNoInicio
+  - [X] InserirNoFinal
+  - [X] RemoverPrimeiro
+  - [X] RemoverUltimo
+  - [X] DequeVazia
 
 Lembrar que a classe interna de nó (herdada de elemento) deve ser **privada** (encapsulada) dentro da estrutura.
 

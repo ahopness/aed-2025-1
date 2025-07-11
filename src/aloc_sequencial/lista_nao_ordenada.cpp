@@ -1,6 +1,6 @@
 #include <string>
 
-#include "lista_nao_ordenada.h"
+#include "../../inc/aloc_sequencial/lista_nao_ordenada.h"
 
 using std::cout;
 using std::endl;

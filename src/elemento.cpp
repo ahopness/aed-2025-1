@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "elemento.h"
+#include "../inc/elemento.h"
 
 using std::cout;
 using std::endl;

@@ -1,6 +1,6 @@
 #include <string>
 
-#include "arvore_binaria.h"
+#include "../../inc/arvore/arvore_binaria.h"
 
 using std::cout;
 using std::endl;

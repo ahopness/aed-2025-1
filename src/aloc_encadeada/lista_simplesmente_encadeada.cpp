@@ -1,4 +1,4 @@
-#include "lista_simplesmente_encadeada.h"
+#include "../../inc/aloc_encadeada/lista_simplesmente_encadeada.h"
 
 using std::cout;
 using std::endl;
