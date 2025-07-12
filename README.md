@@ -177,4 +177,4 @@ make
 
 ## Extra (Post Scriptum)
 
-Tem umas funções de sorting q agnt fez em `src/sorts/sorts.cpp`, sla acho q o esforço a mais poderia valer uns decimos a mais na nota do trabalho... ᵖᶠᵛʳ ʳᵒᵈʳⁱᵍᵒ ˢᵉʲᵃ ᵉᵘ ᵗᵉ ⁱᵐᵖˡᵒʳᵒ
+Tem umas funções de sorting q agnt fez em `src/sorts/sorts.cpp`, sla acho q o esforço a mais poderia valer uns decimos a mais na nota do trabalho... ᵖᶠᵛʳ ʳᵒᵈʳⁱᵍᵒ ᵉᵘ ᵗᵉ ⁱᵐᵖˡᵒʳᵒ
