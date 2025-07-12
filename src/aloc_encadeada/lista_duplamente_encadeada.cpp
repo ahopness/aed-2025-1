@@ -207,7 +207,6 @@ void ListaDuplamenteEncadeada::imprimirListaRecursivo(No* atual, int posicao) {
     }
 }
 
-// O(n)
 void ListaDuplamenteEncadeada::imprimirLista() {
     cout << "Lista Duplamente Encadeada (Tamanho: " << this->tamanho << "):" << endl;
     imprimirListaRecursivo(this->primeiro, 0);

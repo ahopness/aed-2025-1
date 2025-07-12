@@ -56,6 +56,7 @@ bool Fila::FilaVazia() const {
     return false;
 }
 
+// O(1)
 bool Fila::Enfileirar(int id, const std::string& valor) {
     if (FilaCheia()) {
         return false;
@@ -67,6 +68,7 @@ bool Fila::Enfileirar(int id, const std::string& valor) {
     return true;
 }
 
+// O(n)
 bool Fila::Desemfileirar() {
     if (FilaVazia()) {
         return false;

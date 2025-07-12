@@ -181,7 +181,6 @@ void ListaSimplesmenteEncadeada::imprimirListaRecursivo(No* atual, int posicao) 
     }
 }
 
-// O(n)
 void ListaSimplesmenteEncadeada::imprimirLista() {
     cout << "Lista Simplesmente Encadeada (Tamanho: " << this->tamanho << "):" << endl;
     imprimirListaRecursivo(this->primeiro, 0);

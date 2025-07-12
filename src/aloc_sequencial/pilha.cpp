@@ -56,6 +56,7 @@ bool Pilha::PilhaCheia() const {
     return false;
 }
 
+// O(1)
 bool Pilha::Empilhar(int id, const std::string& valor) {
     if (PilhaCheia()) {
         return false;
@@ -67,6 +68,7 @@ bool Pilha::Empilhar(int id, const std::string& valor) {
     return true;
 }
 
+// O(1)
 bool Pilha::Desempilhar() {
     if (PilhaVazia()) {
         return false;

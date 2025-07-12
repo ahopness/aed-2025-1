@@ -139,7 +139,8 @@ bool ListaOrdenada::removerPeloId(int id) {
     return false;
 }
 
-Elemento* ListaOrdenada::buscarPeloId(int id) { // Busca binaria
+// O(log n) - utiliza busca binária para encontrar o elemento
+Elemento* ListaOrdenada::buscarPeloId(int id) {
     int inicio = 0;
     int fim = this->tamanho - 1;
     

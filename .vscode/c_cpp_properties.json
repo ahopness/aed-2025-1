@@ -3,12 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/inc",
-                "${workspaceFolder}/inc/aloc_sequencial",
-                "${workspaceFolder}/inc/aloc_encadeada",
-                "${workspaceFolder}/inc/arvore",
-                "${workspaceFolder}/inc/sorts"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "DEBUG"
@@ -22,12 +17,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/inc",
-                "${workspaceFolder}/inc/aloc_sequencial",
-                "${workspaceFolder}/inc/aloc_encadeada",
-                "${workspaceFolder}/inc/arvore",
-                "${workspaceFolder}/inc/sorts"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",
