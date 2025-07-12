@@ -33,14 +33,14 @@ public:
     ListaOrdenada(int capacidade_inicial = 10);
     ~ListaOrdenada();
     
-    void inserir(int id, const std::string& valor);
+    void inserir(int id, const std::string& valor); // O(n)
 
-    bool removerPrimeiro();
-    bool removerUltimo();
+    bool removerPrimeiro(); // O(n)
+    bool removerUltimo(); // O(1)
 
-    bool removerPeloId(int id);
-    Elemento* buscarPeloId(int id);
-    bool alterarPeloId(int id, const std::string& novo_valor);
+    bool removerPeloId(int id); // O(n)
+    Elemento* buscarPeloId(int id); // O(log n)
+    bool alterarPeloId(int id, const std::string& novo_valor); // O(log n)
     
     int getTamanho() const;
     void imprimirLista();

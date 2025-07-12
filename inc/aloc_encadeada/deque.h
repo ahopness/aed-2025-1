@@ -37,10 +37,10 @@ class Deque {
         Deque();
         ~Deque();
 
-        void InserirNoInicio(int id, const std::string& valor);
-        void InserirNoFinal(int id, const std::string& valor);
-        bool RemoverPrimeiro();
-        bool RemoverUltimo();
+        void InserirNoInicio(int id, const std::string& valor); // O(1)
+        void InserirNoFinal(int id, const std::string& valor); // O(1)
+        bool RemoverPrimeiro(); // O(1)
+        bool RemoverUltimo(); // O(1)
         bool DequeVazio() const;
 
         int getTamanho() const;

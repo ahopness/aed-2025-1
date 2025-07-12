@@ -27,8 +27,8 @@ class Fila {
         Fila(int capacidade = 3);
         ~Fila();
 
-        bool Enfileirar(int id, const std::string& valor);
-        bool Desemfileirar();
+        bool Enfileirar(int id, const std::string& valor); // O(1)
+        bool Desemfileirar(); // O(n)
         Elemento* ConsultarInicio();
         Elemento* ConsultarFinal();
         bool FilaCheia() const;

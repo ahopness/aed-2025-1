@@ -63,6 +63,7 @@ void ArvoreBinaria::destruirRecursivo(No* no) {
     }
 }
 
+// O(log n)
 void ArvoreBinaria::inserir(int id, const std::string& valor) {
     No* novoNo = new No(id, valor);
     if (!this->raiz) {
@@ -88,23 +89,7 @@ void ArvoreBinaria::inserirRecursivo(No* noAtual, No* novoNo) {
     }
 }
 
-Elemento* ArvoreBinaria::buscar(int id) {
-    return buscarRecursivo(this->raiz, id);
-}
-
-Elemento* ArvoreBinaria::buscarRecursivo(No* no, int id) {
-    if (!no) {
-        return nullptr;
-    }
-    if (no->getID() == id) {
-        return no;
-    } else if (id < no->getID()) {
-        return buscarRecursivo(no->getEsquerda(), id);
-    } else {
-        return buscarRecursivo(no->getDireita(), id);
-    }
-}
-
+// O(log n)
 bool ArvoreBinaria::remover(int id) {
     if (!this->raiz) {
         return false;
@@ -157,6 +142,24 @@ ArvoreBinaria::No* ArvoreBinaria::encontrarMinimo(No* no) {
         no = no->getEsquerda();
     }
     return no;
+}
+
+// O(log n)
+Elemento* ArvoreBinaria::buscar(int id) {
+    return buscarRecursivo(this->raiz, id);
+}
+
+Elemento* ArvoreBinaria::buscarRecursivo(No* no, int id) {
+    if (!no) {
+        return nullptr;
+    }
+    if (no->getID() == id) {
+        return no;
+    } else if (id < no->getID()) {
+        return buscarRecursivo(no->getEsquerda(), id);
+    } else {
+        return buscarRecursivo(no->getDireita(), id);
+    }
 }
 
 void ArvoreBinaria::imprimir() const {

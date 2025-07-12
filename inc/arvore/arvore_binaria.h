@@ -41,9 +41,9 @@ public:
     ArvoreBinaria();
     ~ArvoreBinaria();
 
-    void inserir(int id, const std::string& valor);
-    bool remover(int id);
-    Elemento* buscar(int id);
+    void inserir(int id, const std::string& valor); // O(log n)
+    bool remover(int id); // O(log n)
+    Elemento* buscar(int id); // O(log n)
     void imprimir() const;
 };
 

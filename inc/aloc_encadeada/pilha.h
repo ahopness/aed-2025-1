@@ -37,8 +37,8 @@ class PilhaEnc {
         PilhaEnc();
         ~PilhaEnc();
 
-        void Empilhar(int id, const std::string& value);
-        bool Desempilhar();
+        void Empilhar(int id, const std::string& value); // O(1)
+        bool Desempilhar(); // O1)
         Elemento* ConsultarTopo();
         bool PilhaVazia() const;
 

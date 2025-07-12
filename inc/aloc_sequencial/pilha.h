@@ -27,8 +27,8 @@ class Pilha {
         Pilha(int capacidade = 3);
         ~Pilha();
 
-        bool Empilhar(int id, const std::string& valor);
-        bool Desempilhar();
+        bool Empilhar(int id, const std::string& valor); // O(1)
+        bool Desempilhar(); // O(1)
         Elemento* ConsultarTopo();
         bool PilhaCheia() const;
         bool PilhaVazia() const;

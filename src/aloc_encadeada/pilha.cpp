@@ -1,61 +1,61 @@
 #include <string>
 
-#include "../../inc/aloc_encadeada/fila_encadeada.h"
+#include "../../inc/aloc_encadeada/pilha.h"
+
+//UTILIZANDO A LISTA DUPLAMENTE ENCADEADA CIRCULAR (O(1) para remocao e insercao)
+
+// CLASSE NÓ
 
 using std::cout;
 using std::endl;
 
-//UTILIZANDO A LISTA DUPLAMENETE ENCADEADA CIRCULAR (O(1) para remocao e insercao)
-
-// CLASSE NO
-
-FilaEnc::No::No(int id, const std::string& valor) {
+PilhaEnc::No::No(int id, const std::string& valor) {
     this->ID = id;
     this->valor = valor;
     this->proximo = nullptr;
     this->anterior = nullptr;
 }
 
-FilaEnc::No::~No() {
+PilhaEnc::No::~No() {
 }
 
-void FilaEnc::No::setValor(const std::string& valor) {
+void PilhaEnc::No::setValor(const std::string& valor) {
     this->valor = valor;
 }
 
-std::string FilaEnc::No::getValor() const {
+std::string PilhaEnc::No::getValor() const {
     return this->valor;
 }
 
-void FilaEnc::No::setProximo(No* proximo) {
+void PilhaEnc::No::setProximo(No* proximo) {
     this->proximo = proximo;
 }
 
-FilaEnc::No* FilaEnc::No::getProximo() const {
+PilhaEnc::No* PilhaEnc::No::getProximo() const {
     return this->proximo;
 }
 
-void FilaEnc::No::setAnterior(No* anterior) {
+void PilhaEnc::No::setAnterior(No* anterior) {
     this->anterior = anterior;
 }
 
-FilaEnc::No* FilaEnc::No::getAnterior() const {
+PilhaEnc::No* PilhaEnc::No::getAnterior() const {
     return this->anterior;
 }
 
-void FilaEnc::No::imprimirInfo() {
+void PilhaEnc::No::imprimirInfo() {
     cout << "ID: " << this->ID << ", valor: " << this->valor;
 }
 
-//CLASSE FILA
+// CLASSE PILHA
 
-FilaEnc::FilaEnc() {
+PilhaEnc::PilhaEnc() {
     this->primeiro = nullptr;
     this->ultimo = nullptr;
     this->tamanho = 0;
 }
 
-FilaEnc::~FilaEnc() {
+PilhaEnc::~PilhaEnc() {
     if (this->tamanho == 0) {
         return;
     }
@@ -64,12 +64,13 @@ FilaEnc::~FilaEnc() {
 
     No* atual = this->primeiro;
     while (atual != nullptr) {
-        No* temp = atual; atual = atual->getProximo();
+        No* temp = atual;
+        atual = atual->getProximo();
         delete temp;
     }
 }
 
-bool FilaEnc::FilaVazia() const {
+bool PilhaEnc::PilhaVazia() const {
     if (this->tamanho == 0) {
         return true;
     }
@@ -77,7 +78,7 @@ bool FilaEnc::FilaVazia() const {
 }
 
 // O(1) - insere no final
-void FilaEnc::Emfileirar(int id, const std::string& valor) {
+void PilhaEnc::Empilhar(int id, const std::string& valor) {
     No* novoNo = new No(id, valor);
 
     if (this->tamanho == 0) {
@@ -95,61 +96,55 @@ void FilaEnc::Emfileirar(int id, const std::string& valor) {
     this->tamanho++;
 }
 
-// O(1) - remove do início
-bool FilaEnc::Desemfileirar() {
-    if (FilaVazia()) {
+// O(1) - remove do final
+bool PilhaEnc::Desempilhar() {
+    if (this->tamanho == 0) {
         return false;
     }
-    No* temp = this->primeiro;
+
+    No* temp = this->ultimo;
 
     if (this->tamanho == 1) {
         this->primeiro = nullptr;
         this->ultimo = nullptr;
     } else {
-        this->primeiro = this->primeiro->getProximo();
-        this->primeiro->setAnterior(this->ultimo);
+        this->ultimo = this->ultimo->getAnterior();
         this->ultimo->setProximo(this->primeiro);
+        this->primeiro->setAnterior(this->ultimo);
     }
     delete temp;
     this->tamanho--;
     return true;
 }
 
-Elemento* FilaEnc::ConsultarInicio() {
-    if (FilaVazia()) {
-        return nullptr;
-    }
-    return this->primeiro;
-}
-
-Elemento* FilaEnc::ConsultarFinal() {
-    if (FilaVazia()) {
+Elemento* PilhaEnc::ConsultarTopo() {
+    if (PilhaVazia()) {
         return nullptr;
     }
     return this->ultimo;
 }
 
-int FilaEnc::getTamanho() const {
+int PilhaEnc::getTamanho() const{
     return this->tamanho;
 }
 
-void FilaEnc::imprimirFila() {
-    cout << "Fila (De Lista Duplamente Encadeada Circular) (Tamanho: " << this->tamanho << "):" << endl;
-
-    if (this->tamanho == 0) {
+void PilhaEnc::imprimirPilha() {
+     cout << "Pilha (De Lista Duplamente Encadeada Circular) (Tamanho: " << this->tamanho << "):" << endl;
+     
+     if (this->tamanho == 0) {
         cout << endl;
         return;
-    }
+     }
 
-    No* atual = this->primeiro;
-    int posicao = 0;
+     No* atual = this->primeiro;
+     int posicao = 0;
 
-    do {
+     do {
         cout << "  Posicao " << posicao << ": ";
         atual->imprimirInfo();
         cout << endl;
         atual = atual->getProximo();
         posicao++;
-    } while (atual != this->primeiro);
-    cout << endl;
+     } while (atual != this->primeiro);
+     cout << endl;
 }

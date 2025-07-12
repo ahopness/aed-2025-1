@@ -2,17 +2,21 @@
 
 #include "../inc/aloc_sequencial/lista_nao_ordenada.h"
 #include "../inc/aloc_sequencial/lista_ordenada.h"
+
 #include "../inc/aloc_sequencial/pilha.h"
 #include "../inc/aloc_sequencial/fila.h"
 
 #include "../inc/aloc_encadeada/lista_simplesmente_encadeada.h"
 #include "../inc/aloc_encadeada/lista_duplamente_encadeada.h"
 #include "../inc/aloc_encadeada/lista_duplamente_encadeada_circular.h"
-#include "../inc/aloc_encadeada/pilha_encadeada.h"
-#include "../inc/aloc_encadeada/fila_encadeada.h"
+
+#include "../inc/aloc_encadeada/pilha.h"
+#include "../inc/aloc_encadeada/fila.h"
 #include "../inc/aloc_encadeada/deque.h"
 
 #include "../inc/arvore/arvore_binaria.h"
+
+#include "../inc/sorts/sorts.h"
 
 using std::cout;
 using std::endl;
@@ -70,7 +74,7 @@ void demonstrarListaOrdenada() {
     cout << endl;
 }
 
-void demonstrarPilhaSeq() {
+void demonstrarPilhaSequencial() {
     cout << "=== DEMONSTRACAO DA PILHA (NA ALOCACAO SEQUENCIAL) ===" << endl;
 
     Pilha pilha;
@@ -118,8 +122,7 @@ void demonstrarPilhaSeq() {
     }
     cout << endl;
 }
-
-void demonstrarFilaSeq() {
+void demonstrarFilaSequencial() {
     cout << "=== DEMONSTRACAO DA FILA (NA ALOCACAO SEQUENCIAL) ===" << endl;
 
     Fila fila;
@@ -365,7 +368,6 @@ void demonstrarPilhaEncadeada() {
     }
 
 }
-
 void demonstrarFilaEncadeada() {
     cout << "=== DEMONSTRACAO FILA (DE LISTA DUPLAMENTE ENCADEADA CIRCULAR) ===" << endl;
 
@@ -422,8 +424,7 @@ void demonstrarFilaEncadeada() {
     }
 
 }
-
-void demonstrarDeque() {
+void demonstrarDequeEncadeado() {
     cout << "=== DEMONSTRACAO DEQUE (DE LISTA DUPLAMENTE ENCADEADA CIRCULAR) ===" << endl;
 
     Deque deque;
@@ -535,26 +536,115 @@ void demonstrarArvoreBinaria() {
     cout << endl;
 }
 
+void imprimirArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+void copiarArray(int destino[], int origem[], int n) {
+    for (int i = 0; i < n; i++) {
+        destino[i] = origem[i];
+    }
+}
+void demonstrarSorts() {
+    cout << "=== DEMONSTRACAO ALGORITMOS DE ORDENACAO ===" << endl;
+    
+    int arr_original[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr_original) / sizeof(arr_original[0]);
+    
+    cout << "Array original: ";
+    imprimirArray(arr_original, n);
+    cout << endl;
+    
+    cout << "--- BUBBLE SORT (O(n^2)) ---" << endl;
+    int arr_bubble[7];
+    copiarArray(arr_bubble, arr_original, n);
+    cout << "Antes: ";
+    imprimirArray(arr_bubble, n);
+    bubble_sort(arr_bubble, n);
+    cout << "Depois: ";
+    imprimirArray(arr_bubble, n);
+    cout << endl;
+    
+    cout << "--- INSERTION SORT (O(n^2)) ---" << endl;
+    int arr_insertion[7];
+    copiarArray(arr_insertion, arr_original, n);
+    cout << "Antes: ";
+    imprimirArray(arr_insertion, n);
+    insertion_sort(arr_insertion, n);
+    cout << "Depois: ";
+    imprimirArray(arr_insertion, n);
+    cout << endl;
+    
+    cout << "--- MERGE SORT (O(n log n)) ---" << endl;
+    int arr_merge[7];
+    copiarArray(arr_merge, arr_original, n);
+    cout << "Antes: ";
+    imprimirArray(arr_merge, n);
+    merge_sort(arr_merge, 0, n - 1);
+    cout << "Depois: ";
+    imprimirArray(arr_merge, n);
+    cout << endl;
+    
+    cout << "--- QUICK SORT (O(n log n)) ---" << endl;
+    int arr_quick[7];
+    copiarArray(arr_quick, arr_original, n);
+    cout << "Antes: ";
+    imprimirArray(arr_quick, n);
+    quick_sort(arr_quick, 0, n - 1);
+    cout << "Depois: ";
+    imprimirArray(arr_quick, n);
+    cout << endl;
+    
+    cout << "--- HEAP SORT (O(n log n)) ---" << endl;
+    int arr_heap[7];
+    copiarArray(arr_heap, arr_original, n);
+    cout << "Antes: ";
+    imprimirArray(arr_heap, n);
+    heap_sort(arr_heap, n);
+    cout << "Depois: ";
+    imprimirArray(arr_heap, n);
+    cout << endl;
+    
+
+    cout << "--- BOGO SORT (O(n!)) - usando array menor pra demonstracao ---" << endl;
+    initialize_random();
+    int arr_bogo[] = {3, 1, 2};
+    int n_bogo = 3;
+    cout << "Antes: ";
+    imprimirArray(arr_bogo, n_bogo);
+    cout << "Ordenando com Bogo Sort (PS: pode demorar...)" << endl;
+    bogosort(arr_bogo, n_bogo);
+    cout << "Depois: ";
+    imprimirArray(arr_bogo, n_bogo);
+    cout << endl;
+}
+
 int main() {
-    //Demonstrar Listas Sequenciais
+    // Demonstrar Listas Sequenciais
     demonstrarListaNaoOrdenada();
     demonstrarListaOrdenada();
-    ////Pilha e Fila
-    demonstrarPilhaSeq();
-    demonstrarFilaSeq();
 
-    //Demonstrar Listas Encadeadas
+    // Pilha e Fila
+    demonstrarPilhaSequencial();
+    demonstrarFilaSequencial();
+
+    // Demonstrar Listas Encadeadas
     demonstrarListaSimplesmenteEncadeada();
     demonstrarListaDuplamenteEncadeada();
     demonstrarListaDuplamenteEncadeadaCircular();
-    ////Pilha, Fila e Deque
+
+    // Pilha, Fila e Deque
     demonstrarPilhaEncadeada();
     demonstrarFilaEncadeada();
-    demonstrarDeque();
+    demonstrarDequeEncadeado();
 
-
-    //Demonstrar Arvore
+    // Arvore
     demonstrarArvoreBinaria();
+
+    // Extra: Sorts
+    demonstrarSorts();
 
     return 0;
 }

@@ -37,8 +37,8 @@ class FilaEnc {
         FilaEnc();
         ~FilaEnc();
 
-        void Emfileirar(int id, const std::string& valor);
-        bool Desemfileirar();
+        void Emfileirar(int id, const std::string& valor); // O(1)
+        bool Desemfileirar(); // O(1)
         Elemento* ConsultarInicio();
         Elemento* ConsultarFinal();
         bool FilaVazia() const;

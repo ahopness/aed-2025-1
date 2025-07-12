@@ -32,15 +32,15 @@ public:
     ListaNaoOrdenada(int capacidade_inicial = 10);
     ~ListaNaoOrdenada();
     
-    void inserirNoInicio(int id, const std::string& valor);
-    void inserirNoFinal(int id, const std::string& valor);
+    void inserirNoInicio(int id, const std::string& valor); // O(n)
+    void inserirNoFinal(int id, const std::string& valor); // O(1)
 
-    bool removerPrimeiro();
-    bool removerUltimo();
+    bool removerPrimeiro(); // O(n)
+    bool removerUltimo(); // O(1)
 
-    bool removerPeloId(int id);
-    Elemento* buscarPeloId(int id);
-    bool alterarPeloId(int id, const std::string& novo_valor);
+    bool removerPeloId(int id); // O(n)
+    Elemento* buscarPeloId(int id); // O(n)
+    bool alterarPeloId(int id, const std::string& novo_valor); // O(n)
     
     int getTamanho() const;
     void imprimirLista();

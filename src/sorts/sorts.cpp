@@ -6,6 +6,7 @@
     Data: 09/07/2025
     Autor: Javier Blanco Rodrigues Cadima
 */
+
 #include <iostream> // Para Std
 #include <cstdlib> // Para random()
 #include <ctime>   // Para aleatorizar mais corretamente
@@ -18,6 +19,7 @@ using std::time;
 
 // Algoritmos de ordenação para serem usados no projeto
 
+// O(n^2)
 void bubble_sort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -28,6 +30,7 @@ void bubble_sort(int arr[], int n) {
     }
 }
 
+// O(n^2)
 void insertion_sort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
         int key = arr[i];
@@ -72,6 +75,7 @@ void merge(int arr[], int left, int mid, int right) {
     delete[] R;
 }
 
+// O(n log n)
 void merge_sort(int arr[], int left, int right) {
     if (left < right) {
         int mid = left + (right - left) / 2;
@@ -81,6 +85,7 @@ void merge_sort(int arr[], int left, int right) {
     }
 }
 
+// O(n log n)
 void quick_sort(int arr[], int low, int high) {
     if (low < high) {
         int pivot = arr[high];
@@ -116,6 +121,7 @@ void heapify(int arr[], int n, int i) {
     }
 }
 
+// O(n log n)
 void heap_sort(int arr[], int n) {
     for (int i = n / 2 - 1; i >= 0; i--) {
         heapify(arr, n, i);
@@ -126,6 +132,7 @@ void heap_sort(int arr[], int n) {
     }
 }
 
+// O(n!)
 void bogosort(int arr[], int n) {
     while (true) {
         bool sorted = true;
@@ -145,7 +152,7 @@ void bogosort(int arr[], int n) {
 }
 
 void initialize_random() {
-    srand(static_cast<unsigned int>(time(nullptr))); // Seed the random number generator
+    srand(static_cast<unsigned int>(time(nullptr))); // Inicializa o gerador de números aleatórios
 }
 
 

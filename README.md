@@ -90,10 +90,10 @@ Todas as estruturas, utilizando alocação dinamica ou não, tem funções para:
     - removerPeloId: **O(n)**
     - buscarPeloId: **O(n)**
     - alterarPeloId: **O(n)**
-  - Pilha (`src/aloc_encadeada/pilha_encadeada.cpp`)
+  - Pilha (`src/aloc_encadeada/pilha.cpp`)
     - Empilhar: **O(1)**
     - Desempilhar: **O(1)**
-  - Fila (`src/aloc_encadeada/fila_encadeada.cpp`)
+  - Fila (`src/aloc_encadeada/fila.cpp`)
     - Enfileirar: **O(1)**
     - Desemfileirar: **O(1)**
   - Deque (`src/aloc_encadeada/deque.cpp`)
@@ -101,6 +101,11 @@ Todas as estruturas, utilizando alocação dinamica ou não, tem funções para:
     - InserirNoFinal: **O(1)**
     - removerPrimeiro: **O(1)**
     - removerUltimo: **O(1)**
+
+- **Árvore de Busca Binária** (`src/arvore/arvore_binaria.cpp`)
+  - inserir: **O(log n)**
+  - remover: **O(log n)**
+  - buscar: **O(log n)**
 
 ## Instruções de execução
 

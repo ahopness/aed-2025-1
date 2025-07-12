@@ -13,8 +13,8 @@ set(SOURCE_FILES
     src/aloc_encadeada/lista_duplamente_encadeada_circular.cpp
     src/aloc_encadeada/lista_duplamente_encadeada.cpp
     src/aloc_encadeada/lista_simplesmente_encadeada.cpp
-    src/aloc_encadeada/pilha_encadeada.cpp
-    src/aloc_encadeada/fila_encadeada.cpp
+    src/aloc_encadeada/pilha.cpp
+    src/aloc_encadeada/fila.cpp
     src/aloc_encadeada/deque.cpp
 )
 
