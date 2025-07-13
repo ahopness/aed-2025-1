@@ -160,24 +160,19 @@ cd build
 cmake ..
 ```
 
-- **(WINDOWS APENAS)** Compilar o projeto:
+- Compilar o projeto:
 ```sh
-cmake --build . --config Release
-```
-
-- **(LINUX/WSL APENAS)** Compilar o projeto:
-```sh
-make
+cmake --build .
 ```
 
 - **(WINDOWS APENAS)** Executar o programa:
 ```sh
-.\Release\aeds-2025-1.exe
+.\aeds_2025_1.exe
 ```
 
 - **(LINUX/WSL APENAS)** Executar o programa:
 ```sh
-./aeds-2025-1
+./aeds_2025_1
 ```
 
 ## Extra (Post Scriptum)
