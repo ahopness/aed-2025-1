@@ -177,7 +177,7 @@ make
 
 - **(LINUX/WSL APENAS)** Executar o programa:
 ```sh
-./aeds-2025-1
+./aeds_2025_1
 ```
 
 ## Extra (Post Scriptum)
