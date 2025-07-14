@@ -13,6 +13,7 @@ Instituto Politécnico, Universidade do Estado do Rio de Janeiro. Julho, 2025.
 - João Pedro Nóbrega de Oliveira Mattos
   - Matricula: *202410329611*
   - Github: *@jpnobrega05*
+  - Adendo*: Git não tava funcionando no computador dele, fez as commits pela conta do Ângelo.
 - Rodrigo Morales Tavares
   - Matricula: *202410068711*
   - Github: *@Shadrick194*
@@ -25,6 +26,9 @@ Instituto Politécnico, Universidade do Estado do Rio de Janeiro. Julho, 2025.
 - Gusthavo Cassimiro Lemos Pereira
   - Matricula: *202410330211*
   - Github: *@Gusthoso*
+  - Adendo*: Git não tava funcionando no computador dele, fez as commits pela conta do Ângelo.
+
+*: Nós descobrimos depois o porque o Git não tava funcionando, tinha haver com o repositório estar privado e o Git CLI não conseguir fazer autecicação de conta do GitHub. O Javier instalou o Github Desktop logo depois no computador dos meninos e funcionou normal, mas até lá nós já tinhamos enviados as commits pela conta do Ângelo.
 
 ## Estrutura do codigo
 
